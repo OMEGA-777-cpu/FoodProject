@@ -1,6 +1,6 @@
 # 🍽️ Food Project
 
-A responsive food delivery and restaurant web application built with clean HTML5 and CSS3. This repository documents lecture-by-lecture progress, starting from foundational directory structuring and typography resets to building out full page layouts.
+A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, and full page section builds.
 
 ---
 
@@ -16,16 +16,16 @@ A responsive food delivery and restaurant web application built with clean HTML5
 
 ## 🎯 Overview
 
-The **Food Project** demonstrates modern web layout techniques and maintainable front-end code organization. Third-party dependencies are strictly separated from custom source code to ensure clear separation of concerns and easier scalability.
+The **Food Project** demonstrates modular front-end web development practices. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 8, 9, 10].
 
 ---
 
 ## 📁 Folder Architecture
 
-The project structure is organized around two primary folders:
+The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Houses all custom, author-created assets and code, including project stylesheets (`style.css`), original images, mock data, and application scripts[cite: 7, 8].
-- **`vendors/`**: Houses external libraries, vendor fonts, utility frameworks, and pre-built stylesheets like `normalize.css` to prevent third-party code from mixing with custom implementation.
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images, application scripts, and mock data[cite: 7, 8].
+- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10].
 
 ---
 
@@ -37,21 +37,29 @@ The project structure is organized around two primary folders:
 - **CSS Reset & Normalization**: Incorporates `normalize.css` ahead of custom styles to ensure HTML elements render uniformly across different browsers before applying project-level resets[cite: 7, 8].
 - **Global Base Rules & Typography**: Sets universal `box-sizing: border-box`, standardizes font sizing, integrates Google Web Fonts, and enhances text legibility using `optimizeLegibility`[cite: 7, 8].
 
+### 📚 Lecture 2 Summary: Responsive Grid System
+- **Grid System Integration**: Downloaded and added `grid.css` from the [Responsive Grid System](https://www.responsivegridsystem.co.uk/) into `vendors/css/` to establish a flexible, column-based layout foundation[cite: 9, 10].
+- **Fluid Proportional Columns**: Utilizes percentage-based fractional column classes spanning from 2 up to 12 columns (e.g., `.span_1_of_2`, `.span_1_of_3`, `.span_1_of_4`) alongside `.col` floats and margins[cite: 10].
+- **Clearfix Self-Clearing**: Implements micro-clearfix rules (`.group:before`, `.group:after`) to ensure parent containers properly contain floated grid columns[cite: 10].
+- **Mobile Fluidity**: Employs a `@media only screen and (max-width: 480px)` query that removes column margins and stacks all grid spans to 100% full width on mobile screens[cite: 10].
+- **Layout Container Setup**: Introduced structural wrapper elements (`<div class="row">`) in `index.html` to center and constrain content rows.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup[cite: 7].
-- **CSS3**: Global resets, typography rules, and custom styles[cite: 8].
-- **Normalize.css**: Cross-browser styling normalization[cite: 7].
-- **Google Fonts**: `Bitcount Single` and `Nova Round` web fonts[cite: 7, 8].
+- **HTML5**: Semantic document structuring[cite: 9].
+- **CSS3**: Layouts, resets, typography, and responsive media queries[cite: 8, 10].
+- **Normalize.css**: Cross-browser baseline normalization[cite: 9].
+- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 9, 10].
+- **Google Fonts**: `Bitcount Single` and `Nova Round` web fonts[cite: 9].
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-Food Project/
+15. Food Project/
 ├── resources/
 │   ├── css/
 │   │   ├── img/
@@ -61,6 +69,7 @@ Food Project/
 │   └── js/
 ├── vendors/
 │   ├── css/
+│   │   ├── grid.css
 │   │   └── normalize.css
 │   ├── fonts/
 │   └── js/
