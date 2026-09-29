@@ -1,6 +1,6 @@
 # 🍽️ Food Project
 
-A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, and full page section builds.
+A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3[cite: 16, 17]. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, and full page section builds[cite: 7, 8, 9, 10, 11, 14, 16, 17].
 
 ---
 
@@ -16,16 +16,16 @@ A responsive food delivery and restaurant web application built with clean HTML5
 
 ## 🎯 Overview
 
-The **Food Project** demonstrates modular front-end web development practices. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 8, 9, 10, 11, 14, 15].
+The **Food Project** demonstrates modular front-end web development practices[cite: 7, 9, 16]. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 9, 10, 16, 17].
 
 ---
 
 ## 📁 Folder Architecture
 
-The codebase separates custom code from external dependencies:
+The codebase separates custom code from external dependencies[cite: 7, 9, 16]:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images (`hero-image.jpg`), application scripts, and mock data[cite: 7, 8, 14, 15].
-- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10, 15].
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images (`hero-image.jpg`, `Logo.png`), application scripts, and mock data[cite: 7, 8, 14, 16, 17, 18].
+- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10, 16].
 
 ---
 
@@ -57,15 +57,21 @@ The codebase separates custom code from external dependencies:
 - **Primary & Ghost Variants**: Developed `.btn-full` (solid orange background `#e67e22`) and `.btn-ghost` (transparent outline style) to establish clear call-to-action visual hierarchy[cite: 14, 15].
 - **Interactive State Transitions**: Added `:hover` and `:active` pseudo-class states transitioning background and border colors smoothly to a deeper shade of orange (`#cf6d17`)[cite: 14].
 
+### 📚 Lecture 5 Summary: Header Section - Part-3
+- **Navigation Bar Layout**: Implemented a semantic `<nav>` bar inside the header wrapped in a `.row` container with a maximum width of `1140px` and centered alignment (`margin: 0 auto`)[cite: 16, 17].
+- **Brand Identity Asset**: Added the brand logo image (`Logo.png`) into `resources/img/`, floated it to the left, and set a clean proportional height of `100px`[cite: 16, 17, 18].
+- **Navigation Menu Alignment**: Floated `.main-nav` to the right with zero list markers and styled inline-block items with `40px` horizontal spacing[cite: 16, 17].
+- **Animated Underline Hover State**: Styled uppercase anchor links with `padding: 8px 0px`, a transparent baseline border, and a smooth `0.2s` transition to a solid accent color (`border-bottom: 2px solid #e67e22`) on `:hover` and `:active`[cite: 17].
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, buttons, text wrappers).
-- **CSS3**: Linear gradient overlays, transitions, button component design, absolute positioning, and typography[cite: 14].
-- **Normalize.css**: Cross-browser baseline normalization[cite: 15].
-- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 10, 15].
-- **Google Fonts**: `Lato` web font family[cite: 14, 15].
+- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, buttons, text wrappers).
+- **CSS3**: Linear gradient overlays, transitions, button component design, float-based navigation, absolute positioning, and typography[cite: 17].
+- **Normalize.css**: Cross-browser baseline normalization[cite: 16].
+- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 10, 16].
+- **Google Fonts**: `Lato` web font family[cite: 16, 17].
 
 ---
 
@@ -80,6 +86,7 @@ Food Project/
 │   │   └── style.css
 │   ├── data/
 │   ├── img/
+│   │   └── Logo.png
 │   └── js/
 ├── vendors/
 │   ├── css/
