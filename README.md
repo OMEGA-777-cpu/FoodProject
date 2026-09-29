@@ -16,7 +16,7 @@ A responsive food delivery and restaurant web application built with clean HTML5
 
 ## 🎯 Overview
 
-The **Food Project** demonstrates modular front-end web development practices. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 8, 9, 10, 11, 12].
+The **Food Project** demonstrates modular front-end web development practices. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 8, 9, 10, 11, 14, 15].
 
 ---
 
@@ -24,8 +24,8 @@ The **Food Project** demonstrates modular front-end web development practices. B
 
 The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images (`hero-image.jpg`), application scripts, and mock data[cite: 7, 8, 11, 12].
-- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10, 11].
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images (`hero-image.jpg`), application scripts, and mock data[cite: 7, 8, 14, 15].
+- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10, 15].
 
 ---
 
@@ -45,27 +45,34 @@ The codebase separates custom code from external dependencies:
 - **Layout Container Setup**: Introduced structural wrapper elements (`<div class="row">`) in `index.html` to center and constrain content rows[cite: 9].
 
 ### 📚 Lecture 3 Summary: Header Section - Part-1
-- **Hero Section Markup**: Structured a semantic `<header>` element containing a `.hero-text-box` with a primary headline (`<h1>`) and dual call-to-action anchor links.
+- **Hero Section Markup**: Structured a semantic `<header>` element containing a `.hero-text-box` with a primary headline (`<h1>`) and dual call-to-action anchor links[cite: 11].
 - **Full-Screen Hero Background**: Applied `hero-image.jpg` as a responsive full-viewport background (`height: 100vh`) using `background-size: cover` and `background-position: center`[cite: 12].
 - **Absolute Center Positioning**: Centered the `.hero-text-box` vertically and horizontally using `position: absolute`, `top: 50%`, `left: 50%`, and `transform: translate(-50%, -50%)` constrained to a `1140px` layout width[cite: 12].
 - **Typography Transition**: Replaced initial fonts with the clean, versatile Google Font `Lato` (light weight 300) to establish an elegant modern aesthetic[cite: 11, 12].
+
+### 📚 Lecture 4 Summary: Header Section - Part-2
+- **Dark Gradient Overlay**: Layered a semi-transparent dark linear gradient (`linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))`) over the hero background image to dramatically boost headline contrast and readability[cite: 14].
+- **Headline Styling**: Formatted the `<h1>` with uppercase transformation, customized letter spacing (`1px`), word spacing (`3px`), white text color, and responsive font sizing (`240%`)[cite: 14].
+- **Reusable Button Framework**: Configured a base `.btn` class with inline-block display, rounded corners (`border-radius: 10px`), and smooth property transition effects (`0.2s`)[cite: 14, 15].
+- **Primary & Ghost Variants**: Developed `.btn-full` (solid orange background `#e67e22`) and `.btn-ghost` (transparent outline style) to establish clear call-to-action visual hierarchy[cite: 14, 15].
+- **Interactive State Transitions**: Added `:hover` and `:active` pseudo-class states transitioning background and border colors smoothly to a deeper shade of orange (`#cf6d17`)[cite: 14].
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, text containers, links)[cite: 11].
-- **CSS3**: Layouts, resets, typography, absolute coordinate centering, and viewport-height styling[cite: 10, 12].
-- **Normalize.css**: Cross-browser baseline normalization[cite: 11].
-- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 10, 11].
-- **Google Fonts**: `Lato` web font family[cite: 11, 12].
+- **HTML5**: Semantic document structuring (`<header>`, buttons, text wrappers).
+- **CSS3**: Linear gradient overlays, transitions, button component design, absolute positioning, and typography[cite: 14].
+- **Normalize.css**: Cross-browser baseline normalization[cite: 15].
+- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 10, 15].
+- **Google Fonts**: `Lato` web font family[cite: 14, 15].
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-15. Food Project/
+Food Project/
 ├── resources/
 │   ├── css/
 │   │   ├── img/
