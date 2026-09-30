@@ -24,7 +24,7 @@ The **Food Project** demonstrates modular front-end web development practices. B
 
 The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media assets (`hero-image.jpg`, `Logo.png`, food gallery images), application scripts, and mock data.
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media assets (`hero-image.jpg`, `Logo.png`, food showcase images, mobile mockups, and app badges), application scripts, and mock data.
 - **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean.
 
 ---
@@ -91,6 +91,13 @@ The codebase separates custom code from external dependencies:
 - **Flush Edge-to-Edge Layout**: Applied `padding: 0;` to `.section-meals` to remove default section padding and allow the showcase to sit flush against surrounding page segments.
 - **Content Spacing Refinement**: Adjusted spacing on `.long-copy` with a bottom margin of `30px` to create visual breathing room before feature cards.
 
+### 📚 Lecture 10 Summary: Creating how it works section - Part-1
+- **Section Architecture**: Created `<section class="section-steps">` featuring an `<h2>` heading row ("How it work — Simple as 1,2,3") to explain the service onboarding workflow.
+- **Two-Column Split Layout**: Divided the section using `.col.span_1_of_2 steps-box` containers from the responsive grid system to balance mobile visuals on the left and instructions on the right.
+- **Phone Mockup Visual**: Embedded a smartphone application mockup graphic (`Phone.png`) inside the left column to provide a mobile app preview.
+- **Numbered Step Workflow**: Structured three sequential `.works-step` containers in the right column, pairing numeric step badges (`1`, `2`, `3`) with clear sign-up, ordering, and delivery directions.
+- **App Store Badges**: Added mobile application call-to-action links (`.btn-app`) incorporating official badges for Google Play (`playstore.png`) and the Apple App Store (`appstore.png`).
+
 ---
 
 ## 🛠️ Technologies Used
@@ -123,7 +130,10 @@ Food Project/
 │   │   ├── 6.jpg
 │   │   ├── 7.jpg
 │   │   ├── 8.jpg
-│   │   └── Logo.png
+│   │   ├── appstore.png
+│   │   ├── Logo.png
+│   │   ├── Phone.png
+│   │   └── playstore.png
 │   └── js/
 ├── vendors/
 │   ├── css/
