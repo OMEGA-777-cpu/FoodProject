@@ -84,12 +84,19 @@ The codebase separates custom code from external dependencies:
 - **Edge-to-Edge 4-Column Layout**: Styled `.meals-showcase` to span `width: 100%` and set list items to `float: left` with `width: 25%` to create an edge-to-edge four-column image grid across two rows.
 - **Figure Margin Reset & Responsive Sizing**: Stripped default browser margins on `<figure>` (`margin: 0; width: 100%`) and applied `width: 100%; height: auto;` to `.meal-photo img` for fluid image scaling.
 
+### 📚 Lecture 9 Summary: Creating Favorite meal section - Part-2
+- **Overflow Clipping & Dark Backdrop**: Configured `overflow: hidden;` and `background-color: #000;` on the `.meal-photo` container to keep scaling images confined within their grid cells while creating a dark backdrop behind semi-transparent photos.
+- **Default Image Zoom & Opacity**: Applied `transform: scale(1.15)` and `opacity: 0.7` to `.meal-photo img` so images start slightly enlarged with subdued brightness.
+- **Interactive Hover Reveal**: Added an interactive hover state on `.meal-photo img:hover` that scales down slightly to `scale(1.03)` and brightens to `opacity: 1` with smooth transition timing.
+- **Flush Edge-to-Edge Layout**: Applied `padding: 0;` to `.section-meals` to remove default section padding and allow the showcase to sit flush against surrounding page segments.
+- **Content Spacing Refinement**: Adjusted spacing on `.long-copy` with a bottom margin of `30px` to create visual breathing room before feature cards.
+
 ---
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<ul>`, `<script>`).
-- **CSS3**: Linear gradient overlays, pseudo-elements (`::after`), transitions, button component design, float layouts, and typography.
+- **CSS3**: Image transform scaling, opacity transitions, linear gradient overlays, pseudo-elements (`::after`), button component design, float layouts, and typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
