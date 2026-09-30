@@ -1,6 +1,6 @@
 # 🍽️ Food Project
 
-A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3[cite: 16, 17]. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, and full page section builds[cite: 7, 8, 9, 10, 11, 14, 16, 17].
+A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3[cite: 17, 19]. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, semantic heading hierarchy, and full page section builds[cite: 7, 8, 9, 10, 11, 14, 16, 17, 19].
 
 ---
 
@@ -16,16 +16,16 @@ A responsive food delivery and restaurant web application built with clean HTML5
 
 ## 🎯 Overview
 
-The **Food Project** demonstrates modular front-end web development practices[cite: 7, 9, 16]. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 9, 10, 16, 17].
+The **Food Project** demonstrates modular front-end web development practices[cite: 7, 9, 19]. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design[cite: 7, 9, 10, 16, 17, 19].
 
 ---
 
 ## 📁 Folder Architecture
 
-The codebase separates custom code from external dependencies[cite: 7, 9, 16]:
+The codebase separates custom code from external dependencies[cite: 7, 9, 19]:
 
 - **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images (`hero-image.jpg`, `Logo.png`), application scripts, and mock data[cite: 7, 8, 14, 16, 17, 18].
-- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10, 16].
+- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean[cite: 7, 9, 10, 19].
 
 ---
 
@@ -63,15 +63,23 @@ The codebase separates custom code from external dependencies[cite: 7, 9, 16]:
 - **Navigation Menu Alignment**: Floated `.main-nav` to the right with zero list markers and styled inline-block items with `40px` horizontal spacing[cite: 16, 17].
 - **Animated Underline Hover State**: Styled uppercase anchor links with `padding: 8px 0px`, a transparent baseline border, and a smooth `0.2s` transition to a solid accent color (`border-bottom: 2px solid #e67e22`) on `:hover` and `:active`[cite: 17].
 
+### 📚 Lecture 6 Summary: Feature section - Part-1
+- **Semantic Heading Hierarchy**: Applied SEO and accessibility standards requiring exactly one `<h1>` per page (exclusive to the hero banner), transitioning to `<h2>` for section headings and `<h3>` for subheadings.
+- **Feature Section Scaffolding**: Built `<section class="section-features">` featuring an introductory `.row` container with an `<h2>` heading and a descriptive `.long-copy` lead paragraph[cite: 19].
+- **4-Column Grid Structure**: Implemented four equal columns using `.col.span_1_of_4` inside a `.row` to present key product selling points side-by-side[cite: 10, 19].
+- **Ionicons Integration**: Connected external vector icons via [Ionicons](https://ionic.io/ionicons) by embedding ES module and fallback scripts directly above the closing `</body>` tag[cite: 19].
+- **Feature Component Assembly**: Paired individual columns with distinct outline icons (`infinite-outline`, `flash-outline`, `leaf-outline`, `cart-outline`), `<h3>` titles, and service detail text[cite: 19].
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, buttons, text wrappers).
-- **CSS3**: Linear gradient overlays, transitions, button component design, float-based navigation, absolute positioning, and typography[cite: 17].
-- **Normalize.css**: Cross-browser baseline normalization[cite: 16].
-- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 10, 16].
-- **Google Fonts**: `Lato` web font family[cite: 16, 17].
+- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<script>`)[cite: 19].
+- **CSS3**: Linear gradient overlays, transitions, button component design, float layouts, and typography[cite: 17].
+- **Normalize.css**: Cross-browser baseline normalization[cite: 19].
+- **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework[cite: 10, 19].
+- **Google Fonts**: `Lato` web font family[cite: 17, 19].
+- **Ionicons**: Modern open-source icon pack loaded via script modules[cite: 19].
 
 ---
 
