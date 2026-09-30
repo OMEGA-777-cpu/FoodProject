@@ -24,7 +24,7 @@ The **Food Project** demonstrates modular front-end web development practices. B
 
 The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), images (`hero-image.jpg`, `Logo.png`), application scripts, and mock data.
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media assets (`hero-image.jpg`, `Logo.png`, food gallery images), application scripts, and mock data.
 - **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean.
 
 ---
@@ -78,11 +78,17 @@ The codebase separates custom code from external dependencies:
 - **Large Vector Icon Styling**: Styled `.icon-big` to render Ionicons at `font-size: 350%`, changed their display to `block`, tinted them with brand accent color `#e67e22`, and added a bottom margin.
 - **Typography Balance**: Standardized `<h3>` subheadings with lightweight uppercase typography (`110%`) and refined column paragraph text with `90%` font sizing and `145%` line height.
 
+### 📚 Lecture 8 Summary: Creating Favorite meal section - Part-1
+- **Semantic `<figure>` Container**: Utilized the HTML5 `<figure class="meal-photo">` element to semantically encapsulate food images, establishing a dedicated container that groups visual media with its context or caption.
+- **Meals Showcase Section Scaffolding**: Structured `<section class="section-meals">` containing two separate unordered lists (`.meals-showcase`) showcasing eight meal images (`1.jpg` through `8.jpg`) located in `resources/img/`.
+- **Edge-to-Edge 4-Column Layout**: Styled `.meals-showcase` to span `width: 100%` and set list items to `float: left` with `width: 25%` to create an edge-to-edge four-column image grid across two rows.
+- **Figure Margin Reset & Responsive Sizing**: Stripped default browser margins on `<figure>` (`margin: 0; width: 100%`) and applied `width: 100%; height: auto;` to `.meal-photo img` for fluid image scaling.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<script>`).
+- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<ul>`, `<script>`).
 - **CSS3**: Linear gradient overlays, pseudo-elements (`::after`), transitions, button component design, float layouts, and typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
@@ -94,7 +100,7 @@ The codebase separates custom code from external dependencies:
 ## 📂 Project Structure
 
 ```text
-15. Food Project/
+Food Project/
 ├── resources/
 │   ├── css/
 │   │   ├── img/
@@ -102,6 +108,14 @@ The codebase separates custom code from external dependencies:
 │   │   └── style.css
 │   ├── data/
 │   ├── img/
+│   │   ├── 1.jpg
+│   │   ├── 2.jpg
+│   │   ├── 3.jpg
+│   │   ├── 4.jpg
+│   │   ├── 5.jpg
+│   │   ├── 6.jpg
+│   │   ├── 7.jpg
+│   │   ├── 8.jpg
 │   │   └── Logo.png
 │   └── js/
 ├── vendors/
