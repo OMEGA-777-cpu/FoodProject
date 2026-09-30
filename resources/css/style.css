@@ -113,7 +113,7 @@ h2{
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
-h2::after{
+h2:after{
     display: block;
     height: 2px;
     background-color: #e67e22;
@@ -146,4 +146,21 @@ h3{
     display: block;
     color: #e67e22;
     margin-bottom: 10px;
+}
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo{
+    width: 100%;
+    margin: 0;
+}
+.meal-photo img{
+    width: 100%;
+    height: auto;
 }
