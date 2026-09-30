@@ -70,12 +70,20 @@ The codebase separates custom code from external dependencies:
 - **Ionicons Integration**: Connected external vector icons via [Ionicons](https://ionic.io/ionicons) by embedding ES module and fallback scripts directly above the closing `</body>` tag.
 - **Feature Component Assembly**: Paired individual columns with distinct outline icons (`infinite-outline`, `flash-outline`, `leaf-outline`, `cart-outline`), `<h3>` titles, and service detail text.
 
+### 📚 Lecture 7 Summary: Feature section - Part-2
+- **Section Vertical Rhythm**: Added `padding: 80px 0;` to section containers to establish spacious, clean separation between page segments.
+- **Heading Underline Accent**: Styled `<h2>` headings and implemented a centered orange underline bar using the `h2::after` pseudo-element (`width: 100px`, `height: 2px`, `background-color: #e67e22`).
+- **Lead Paragraph Layout**: Created the `.long-copy` utility class with `line-height: 145%`, constrained to `width: 70%` and centered with `margin-left: 15%` for optimal line length and readability.
+- **Column Card Padding**: Added the `.box` class to the grid columns with `padding: 1%` to prevent inner text and icons from touching container edges.
+- **Large Vector Icon Styling**: Styled `.icon-big` to render Ionicons at `font-size: 350%`, changed their display to `block`, tinted them with brand accent color `#e67e22`, and added a bottom margin.
+- **Typography Balance**: Standardized `<h3>` subheadings with lightweight uppercase typography (`110%`) and refined column paragraph text with `90%` font sizing and `145%` line height.
+
 ---
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<script>`).
-- **CSS3**: Linear gradient overlays, transitions, button component design, float layouts, and typography.
+- **CSS3**: Linear gradient overlays, pseudo-elements (`::after`), transitions, button component design, float layouts, and typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
@@ -86,7 +94,7 @@ The codebase separates custom code from external dependencies:
 ## 📂 Project Structure
 
 ```text
-Food Project/
+15. Food Project/
 ├── resources/
 │   ├── css/
 │   │   ├── img/
