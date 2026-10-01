@@ -24,7 +24,7 @@ The **Food Project** demonstrates modular front-end web development practices. B
 
 The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media assets (`hero-image.jpg`, `Logo.png`, food showcase images, mobile mockups, and app badges), application scripts, and mock data.
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media assets (`hero-image.jpg`, `Logo.png`, food showcase images, mobile mockups, and app store badges), application scripts, and mock data.
 - **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean.
 
 ---
@@ -98,12 +98,20 @@ The codebase separates custom code from external dependencies:
 - **Numbered Step Workflow**: Structured three sequential `.works-step` containers in the right column, pairing numeric step badges (`1`, `2`, `3`) with clear sign-up, ordering, and delivery directions.
 - **App Store Badges**: Added mobile application call-to-action links (`.btn-app`) incorporating official badges for Google Play (`playstore.png`) and the Apple App Store (`appstore.png`).
 
+### 📚 Lecture 11 Summary: Creating how it works section - Part-2
+- **Circular Step Number Badges**: Styled the numeric step badges (`.works-step div`) as rounded circular elements using `border: 4px solid #e67e22`, `border-radius: 50%`, fixed dimensions (`55px × 55px`), and `float: left` so text lines up neatly beside them.
+- **Micro-Clearfix Utility**: Implemented a reusable `.clearfix` utility with `zoom: 1` and `::after` clearing pseudo-element applied to `.meals-showcase` to contain floated image items properly.
+- **Column Balance & Alignment**: Sized `.app-screen` to `52%` width with centered alignment and asymmetric column padding (`padding-right: 3%` on the phone column and `padding-left: 3%` on the instructions column) for visual balance.
+- **Vertical Step Rhythm**: Added `margin-bottom: 50px` to `.works-step` elements, extending the final step's margin with `:last-of-type` to `80px` before the app download buttons.
+- **Section Contrast Styling**: Gave `.section-steps` an off-white background (`background-color: #f4f4f4`) and `overflow: hidden` to visually delineate the steps section from the meals gallery.
+- **App Store Button Sizing**: Styled `.btn-app img` with fixed height (`150px`), automatic aspect ratio width, and horizontal spacing.
+
 ---
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<ul>`, `<script>`).
-- **CSS3**: Image transform scaling, opacity transitions, linear gradient overlays, pseudo-elements (`::after`), button component design, float layouts, and typography.
+- **CSS3**: Image transform scaling, opacity transitions, linear gradient overlays, pseudo-elements (`::after`), micro-clearfix pattern, button component design, float layouts, and typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
