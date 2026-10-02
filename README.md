@@ -148,12 +148,24 @@ The codebase separates custom code from external dependencies:
 - **Feature Strikethrough Indicator**: Created the `.not-available` helper class with `text-decoration: line-through` to denote features excluded from lower-tier plans.
 - **Action Footer Alignment**: Formatted `.plan-box div:last-child` with `border: 0` and `text-align: center` to center-align the call-to-action buttons.
 
+### 📚 Lecture 18 Summary: Creating the contact form section - Part-1
+- **Contact Section Scaffolding**: Built `<section class="section-form">` containing a centered `<h2>` heading ("We're happy to hear from you") to introduce the user feedback and inquiry area.
+- **Form Grid Integration**: Embedded grid `.row` containers inside `<form action="#" method="post">`, dividing each row into `.col.span_1_of_3` for descriptive `<label>` tags and `.col.span_2_of_3` for input controls to ensure alignment across devices.
+- **Diverse HTML5 Form Controls**: Integrated standard form elements including text inputs (`type="text" placeholder="Your Name" required`), email inputs (`type="email" placeholder="Your Email" required`), a `<select>` dropdown menu with option tags, a pre-selected newsletter checkbox (`checked`), and a multi-line `<textarea>`.
+- **Form Submission Layout**: Configured a submit button row using an empty non-breaking space label (`&nbsp;`) in the left column to align the `<input type="submit" value="Send Me">` element with the rest of the form fields.
+
+### 📚 Lecture 19 Summary: Creating the contact form section - Part-2
+- **Form Centering & Width**: Applied the `.contact-form` class to `<form>` with `width: 60%` and `margin: 0 auto` to restrict the form container to an optimal reading width centered within the section.
+- **Standardized Form Control Styling**: Styled `input[type="text"]`, `input[type="email"]`, `<select>`, and `<textarea>` with unified full widths (`width: 100%`), consistent padding (`7px`), subtle gray borders (`1px solid #ccc`), and soft rounded corners (`border-radius: 3px`).
+- **Checkbox Margin Alignment**: Sized and spaced `input[type="checkbox"]` using `margin: 10px 5px 10px 0` to ensure balanced alignment alongside the newsletter label text.
+- **Shared Submit Button System**: Extended the `.btn` and `.btn-full` button rules directly to `input[type="submit"]`, inheriting the identical padding, orange brand colors (`#e67e22`), hover transitions (`#cf6d17`), and borders without code duplication.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<ul>`, `<script>`).
-- **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, transitions, and responsive typography.
+- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<form>`, `<input>`, `<select>`, `<textarea>`, `<ul>`, `<script>`).
+- **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, form field normalization, transitions, and responsive typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
