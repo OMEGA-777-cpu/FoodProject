@@ -160,12 +160,26 @@ The codebase separates custom code from external dependencies:
 - **Checkbox Margin Alignment**: Sized and spaced `input[type="checkbox"]` using `margin: 10px 5px 10px 0` to ensure balanced alignment alongside the newsletter label text.
 - **Shared Submit Button System**: Extended the `.btn` and `.btn-full` button rules directly to `input[type="submit"]`, inheriting the identical padding, orange brand colors (`#e67e22`), hover transitions (`#cf6d17`), and borders without code duplication.
 
+### 📚 Lecture 20 Summary: Creating the footer section - Part-1
+- **Semantic Footer Scaffolding**: Added a semantic `<footer>` container at the base of the page to organize secondary navigation, social links, and copyright text.
+- **Dual-Column Footer Grid**: Implemented a two-column row using `.col.span_1_of_2` from the responsive grid system to position footer navigation links on the left and social channels on the right.
+- **Footer Navigation List**: Structured an unordered list (`.footer-nav`) providing accessible anchor links to corporate pages including About Us, Blog, Press, and iOS/Android app downloads.
+- **Social Network Channel Setup**: Integrated an unordered list (`.social-links`) containing brand Ionicons (`logo-facebook`, `logo-x`, `logo-google`, `logo-instagram`) to represent brand social channels.
+- **Copyright Attribution Row**: Appended a secondary centered `.row` housing legal and copyright notice text (`&copy; 2015 by omnifood.All rights reserved`).
+
+### 📚 Lecture 21 Summary: Creating the footer section - Part-2
+- **Dark Footer Theme & Padding**: Styled `footer` with an elegant dark slate background (`#333`), scaled base font sizing (`80%`), and generous `50px` inner padding for clear separation.
+- **Horizontal List Alignment & Floats**: Floated `.footer-nav` to the left and `.social-links` to the right, arranging list items inline (`display: inline-block`) with `20px` right margins.
+- **Subtle Footer Link Typography**: Neutralized footer text links with dimmed gray coloring (`#888`), removed default anchor underline borders (`border: 0`), and transitioned smoothly to light gray (`#ddd`) on `:hover`.
+- **Brand-Specific Social Hover States**: Configured authentic brand accent hover colors across all social network icons—Facebook (`#3b5998`), X (`white`), Google (`#dd4b39`), and Instagram (`#517fa4`).
+- **Centered Copyright Notice**: Formatted legal copyright text (`footer p`) with centered text alignment, muted tone (`#888`), compact sizing (`90%`), and a top margin of `20px`.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<form>`, `<input>`, `<select>`, `<textarea>`, `<ul>`, `<script>`).
-- **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, form field normalization, transitions, and responsive typography.
+- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<form>`, `<input>`, `<select>`, `<textarea>`, `<footer>`, `<ul>`, `<script>`).
+- **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, form field normalization, brand hover transitions, and responsive typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
