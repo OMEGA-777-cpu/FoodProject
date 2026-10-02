@@ -133,6 +133,21 @@ The codebase separates custom code from external dependencies:
 - **Circular Author Avatars**: Rendered profile headshots with circular borders (`border-radius: 50%`, `height: 45px`) and `vertical-align: middle` beside author names.
 - **Container Clearfix Fix**: Implemented a clearing fix on `.row::after` (`content: ""; display: table; clear: both;`) to reliably prevent parent layout collapse around floated columns.
 
+### 📚 Lecture 16 Summary: Creating Sign up section - Part-1
+- **Pricing Plans Section Scaffolding**: Scaffolded `<section class="section-plans">` accompanied by an `<h2>` heading ("Start eating healthy today") to introduce tiered subscription packages.
+- **3-Tier Responsive Layout**: Utilized `.col.span_1_of_3` column wrappers from the responsive grid system to arrange three subscription cards side-by-side within a `.row` container.
+- **Card Container Structure (`.plan-box`)**: Segmented each `.plan-box` into three structural `<div>` blocks separating the plan header/pricing, the feature checklist (`<ul>`), and the signup button.
+- **Feature Inclusion Indicators**: Utilized Ionicons (`checkmark-outline` and `close-outline`) within the feature lists to visually indicate perk availability across different tiers.
+- **Visual CTA Hierarchy**: Assigned the high-contrast solid button (`.btn-full`) to the recommended Premium plan while styling the Pro and Starter options with the secondary outline button (`.btn-ghost`).
+
+### 📚 Lecture 17 Summary: Creating Sign up section - Part-2
+- **Pricing Card Visual Architecture**: Styled `.section-plans` with a contrasting light background (`#f4f4f4`) and shaped `.plan-box` into clean white cards (`width: 90%; margin-left: 5%; border-radius: 5px`) with subtle partition dividers (`border-bottom: 1px solid #e8e8e8`).
+- **Card Header Distinction**: Tinted the first block (`.plan-box div:first-child`) with an off-white backdrop (`#fcfcfc`) and matching rounded top corners to emphasize pricing headers.
+- **Proportional Price Typography**: Enlarged `.plan-price` numbers to `300%` in an ultra-light weight (`font-weight: 100`) tinted with orange (`#e67e22`), while scaling down frequency tags (`<span>/ month</span>`) to `30%` size.
+- **Feature List Polish & Icon Alignment**: Cleared list decorations (`list-style: none`), added vertical padding (`5px 0`) per feature, and aligned checkmarks and crosses using `.icon-small`.
+- **Feature Strikethrough Indicator**: Created the `.not-available` helper class with `text-decoration: line-through` to denote features excluded from lower-tier plans.
+- **Action Footer Alignment**: Formatted `.plan-box div:last-child` with `border: 0` and `text-align: center` to center-align the call-to-action buttons.
+
 ---
 
 ## 🛠️ Technologies Used
