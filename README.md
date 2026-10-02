@@ -1,6 +1,6 @@
 # 🍽️ Food Project
 
-A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, semantic heading hierarchy, and full page section builds.
+A responsive food delivery and restaurant web application built with clean HTML5 and modern CSS3. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, semantic heading hierarchy, full page section builds, and comprehensive multi-device responsive media queries.
 
 ---
 
@@ -24,7 +24,7 @@ The **Food Project** demonstrates modular front-end web development practices. B
 
 The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), background banners (`hero-image.jpg`, `back-cust.jpg`), brand media (`Logo.png`), food gallery photos, mobile mockups, app badges, city photography, and customer review avatars.
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media queries (`queries.css`), background banners (`hero-image.jpg`, `back-cust.jpg`), brand media (`Logo.png`), food gallery photos, mobile mockups, app badges, city photography, and customer review avatars.
 - **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean.
 
 ---
@@ -174,12 +174,27 @@ The codebase separates custom code from external dependencies:
 - **Brand-Specific Social Hover States**: Configured authentic brand accent hover colors across all social network icons—Facebook (`#3b5998`), X (`white`), Google (`#dd4b39`), and Instagram (`#517fa4`).
 - **Centered Copyright Notice**: Formatted legal copyright text (`footer p`) with centered text alignment, muted tone (`#888`), compact sizing (`90%`), and a top margin of `20px`.
 
+### 📚 Lecture 22 Summary: Making webpage responsive - Part-1
+- **Viewport Meta Configuration**: Embedded `<meta name="viewport" content="width=device-width, initial-scale=1.0">` into `index.html` to instruct mobile browsers to render at native device widths without artificial scaling.
+- **Modular Queries Architecture**: Created `resources/css/queries.css` and linked it directly after `style.css` to manage responsive breakpoints independently while maintaining cascading order.
+- **Horizontal Overflow Guard**: Applied `overflow-x: hidden;` to `html` and `body` in `style.css` to eliminate horizontal scroll glitches across narrowing viewport widths.
+- **Desktop & Large Tablet Breakpoint (`max-width: 1200px`)**: Expanded `.hero-text-box` to `width: 100%` and added `2%` horizontal padding across `.row` containers and hero text to prevent clipping against screen borders.
+- **Tablet Landscape Breakpoint (`max-width: 1023px`)**: Scaled base typography down to `18px`, tightened vertical spacing across all `section` elements to `60px 0`, and broadened `.long-copy` width to `80%` (`margin-left: 10%`) for better mobile readability.
+
+### 📚 Lecture 23 Summary: Making webpage responsive - Part-2
+- **Tablet Refinement Breakpoint (`max-width: 1023px`)**: Fine-tuned component proportions for landscape tablets by scaling down small icons (`.icon-small` to `17px`), expanding `.plan-box` to `100%` width, enlarging `.contact-form` to `80%` width, and adjusting vertical step margins.
+- **Mobile Column Stacking Breakpoint (`max-width: 767px`)**: Transformed multi-column grids into single full-width stacks (`.col { width: 100%; margin: 0 0 4% 0; }`), reduced root font sizing to `16px`, tightened section padding to `30px 0`, and hid desktop navigation (`.main-nav { display: none; }`).
+- **Mobile Steps & Step Badges**: Scaled numeric circular step counters down to `40px × 40px`, reduced step margins to `20px`, and constrained mobile app screen previews to `40%` width with centered alignment.
+- **Float Containment Polish**: Added `overflow: hidden;` to `.works-step` in `style.css` to reliably clear floated circular step badges within compact mobile containers.
+- **Small Smartphone Breakpoint (`max-width: 480px`)**: Expanded `.contact-form` to span `100%` full width and compressed section padding down to `25px 0` for compact handheld displays.
+
 ---
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<form>`, `<input>`, `<select>`, `<textarea>`, `<footer>`, `<ul>`, `<script>`).
 - **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, form field normalization, brand hover transitions, and responsive typography.
+- **Responsive Web Design**: Viewport meta tag configuration and custom media query breakpoints (`queries.css`).
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
@@ -196,6 +211,7 @@ Food Project/
 │   │   ├── img/
 │   │   │   ├── back-cust.jpg
 │   │   │   └── hero-image.jpg
+│   │   ├── queries.css
 │   │   └── style.css
 │   ├── data/
 │   ├── img/
