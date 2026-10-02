@@ -24,7 +24,7 @@ The **Food Project** demonstrates modular front-end web development practices. B
 
 The codebase separates custom code from external dependencies:
 
-- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media assets (`hero-image.jpg`, `Logo.png`, food showcase images, mobile mockups, app store badges, and city photography), application scripts, and mock data.
+- **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), background banners (`hero-image.jpg`, `back-cust.jpg`), brand media (`Logo.png`), food gallery photos, mobile mockups, app badges, city photography, and customer review avatars.
 - **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean.
 
 ---
@@ -119,12 +119,26 @@ The codebase separates custom code from external dependencies:
 - **Global Text Link Styling**: Implemented styled anchor links (`a:link`, `a:visited`) with `#e67e22` color and a subtle bottom border (`border-bottom: 1px solid #e67e22`), transitioning smoothly over `0.5s` to dark gray (`#555`) with a transparent border on `:hover` and `:active`.
 - **App Badge Border Reset**: Added a border reset (`border: 0;`) specifically for `.btn-app` links to ensure mobile store badge images do not inherit the default text link underline.
 
+### 📚 Lecture 14 Summary: Creating Customer testimonial section - Part-1
+- **Semantic Quotation Elements**: Introduced semantic HTML5 `<blockquote>` elements to encapsulate customer feedback, pairing each testimonial with a `<cite>` tag to attribute the customer name and avatar photo.
+- **3-Column Testimonial Layout**: Implemented `.col.span_1_of_3` column wrappers from the responsive grid system to align three customer review cards side-by-side within a `.row` container.
+- **Customer Profile Assets**: Integrated customer headshots (`cust-1.jpg`, `cust-2.jpg`, `cust-3.jpg`) inside `resources/img/` as avatars within the `<cite>` author tag.
+- **Social Proof Section Structure**: Scaffolded `<section class="section-testimonials">` with an `<h2>` heading row ("Our customers can't live without us") to build trust and social proof on the landing page.
+
+### 📚 Lecture 15 Summary: Creating Customer testimonial section - Part-2
+- **Parallax Scrolling Effects**: Applied `background-attachment: fixed` to both `<header>` and `.section-testimonials`, producing a modern parallax scrolling effect as elements slide over the fixed images.
+- **Darkened Testimonial Background**: Positioned `back-cust.jpg` behind `.section-testimonials` under a semi-transparent dark overlay (`linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8))`) with `color: #fff` for sharp typographic contrast.
+- **Decorative Giant Quotation Marks**: Integrated large opening quote marks above every quote via `blockquote::before` (`content: '\201C'`, `font-size: 500%`, `position: absolute`, `top: 0`, `left: -5px`).
+- **Blockquote Typographic Styling**: Enhanced quote text using `font-style: italic`, spacious line height (`145%`), `padding: 2%`, and `position: relative` to anchor the quote mark glyph.
+- **Circular Author Avatars**: Rendered profile headshots with circular borders (`border-radius: 50%`, `height: 45px`) and `vertical-align: middle` beside author names.
+- **Container Clearfix Fix**: Implemented a clearing fix on `.row::after` (`content: ""; display: table; clear: both;`) to reliably prevent parent layout collapse around floated columns.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<ul>`, `<script>`).
-- **CSS3**: Image transform scaling, opacity transitions, linear gradient overlays, pseudo-elements (`::after`), micro-clearfix pattern, button component design, float layouts, and typography.
+- **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<ul>`, `<script>`).
+- **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, transitions, and responsive typography.
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
 - **Google Fonts**: `Lato` web font family.
@@ -139,6 +153,7 @@ Food Project/
 ├── resources/
 │   ├── css/
 │   │   ├── img/
+│   │   │   ├── back-cust.jpg
 │   │   │   └── hero-image.jpg
 │   │   └── style.css
 │   ├── data/
@@ -153,6 +168,9 @@ Food Project/
 │   │   ├── 8.jpg
 │   │   ├── appstore.png
 │   │   ├── berlin.jpg
+│   │   ├── cust-1.jpg
+│   │   ├── cust-2.jpg
+│   │   ├── cust-3.jpg
 │   │   ├── lisbon.jpg
 │   │   ├── Logo.png
 │   │   ├── london.jpg
