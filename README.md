@@ -1,6 +1,6 @@
 # 🍽️ Food Project
 
-A responsive food delivery and restaurant web application built with clean HTML5, modern CSS3, and jQuery. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, semantic heading hierarchy, full page section builds, responsive media queries, and animated JavaScript interactions.
+A responsive food delivery and restaurant landing page built with clean HTML5, modern CSS3, jQuery, and the AOS (Animate On Scroll) library. This repository documents lecture-by-lecture progress, tracking foundational folder architecture, typography setup, responsive grid integration, semantic heading hierarchy, full page section builds, responsive media queries, smooth in-page navigation, and scroll-triggered entrance animations.
 
 ---
 
@@ -16,7 +16,7 @@ A responsive food delivery and restaurant web application built with clean HTML5
 
 ## 🎯 Overview
 
-The **Food Project** demonstrates modular front-end web development practices. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design and interactive functionality.
+The **Food Project** demonstrates modular front-end web development practices. By maintaining a clean separation between third-party frameworks in `vendors/` and custom implementations in `resources/`, the project establishes a scalable, production-ready foundation for responsive design, interactive functionality, and rich scroll animations.
 
 ---
 
@@ -25,7 +25,7 @@ The **Food Project** demonstrates modular front-end web development practices. B
 The codebase separates custom code from external dependencies:
 
 - **`resources/`**: Dedicated exclusively to custom assets and authored code, including stylesheets (`style.css`), media queries (`queries.css`), background banners (`hero-image.jpg`, `back-cust.jpg`), brand media (`Logo.png`), food gallery photos, mobile mockups, app badges, city photography, and customer review avatars.
-- **`vendors/`**: Houses all external libraries, frameworks, vendor fonts, and utility files—such as `normalize.css`, `grid.css`, and vendor JavaScript scripts—ensuring dependencies remain isolated and clean.
+- **`vendors/`**: Houses external styling utilities and libraries—such as `normalize.css` and `grid.css`—ensuring dependencies remain isolated and clean.
 
 ---
 
@@ -205,6 +205,12 @@ The codebase separates custom code from external dependencies:
   - `$(hash).offset().top`: Calculates the exact pixel distance of the target section relative to the top of the document.
   - `800`: Defines the transition duration in milliseconds (0.8s) for a natural, fluid scrolling pace.
 
+### 📚 Lecture 26 Summary: Adding animations
+- **AOS Library Integration**: Linked the [AOS (Animate On Scroll)](https://github.com/michalsnik/aos) CSS stylesheet in the `<head>` and loaded the corresponding JavaScript bundle via unpkg CDN before the closing `</body>` tag.
+- **Scroll Animation Initialization**: Initialized the animation engine globally with `AOS.init()` to calculate viewport scroll offsets and trigger entry keyframes automatically.
+- **Section-Level Fade Transitions**: Attached `data-aos="fade-in"` with `data-aos-duration="2000"` (2-second transitions) across major page sections (`.section-meals`, `.section-steps`, `.section-cities`, `.section-testimonials`, `.section-plans`, `.section-form`) for smooth reveals.
+- **Targeted Component Entrances**: Configured custom entrance animations on key assets, applying `data-aos="slide-left"` with `data-aos-duration="1000"` on the mobile app mockup and `data-aos="zoom-in"` on the featured Premium pricing plan box.
+
 ---
 
 ## 🛠️ Technologies Used
@@ -212,6 +218,7 @@ The codebase separates custom code from external dependencies:
 - **HTML5**: Semantic document structuring (`<header>`, `<nav>`, `<section>`, `<figure>`, `<blockquote>`, `<cite>`, `<form>`, `<input>`, `<select>`, `<textarea>`, `<footer>`, `<ul>`, `<script>`).
 - **CSS3**: Parallax background attachment (`fixed`), gradient overlays, pseudo-elements (`::before`, `::after`), micro-clearfix patterns, form field normalization, brand hover transitions, and responsive typography.
 - **JavaScript & jQuery**: DOM manipulation and jQuery smooth scrolling animation (`animate()`).
+- **AOS (Animate On Scroll)**: Declarative scroll-triggered animations and keyframe reveals.
 - **Responsive Web Design**: Viewport meta tag configuration and custom media query breakpoints (`queries.css`).
 - **Normalize.css**: Cross-browser baseline normalization.
 - **Responsive Grid System (`grid.css`)**: Lightweight fluid column framework.
@@ -231,32 +238,28 @@ Food Project/
 │   │   │   └── hero-image.jpg
 │   │   ├── queries.css
 │   │   └── style.css
-│   ├── data/
-│   ├── img/
-│   │   ├── 1.jpg
-│   │   ├── 2.jpg
-│   │   ├── 3.jpg
-│   │   ├── 4.jpg
-│   │   ├── 5.jpg
-│   │   ├── 6.jpg
-│   │   ├── 7.jpg
-│   │   ├── 8.jpg
-│   │   ├── appstore.png
-│   │   ├── berlin.jpg
-│   │   ├── cust-1.jpg
-│   │   ├── cust-2.jpg
-│   │   ├── cust-3.jpg
-│   │   ├── lisbon.jpg
-│   │   ├── Logo.png
-│   │   ├── london.jpg
-│   │   ├── Phone.png
-│   │   ├── playstore.png
-│   │   └── san-francisco.jpg
-│   └── js/
+│   └── img/
+│       ├── 1.jpg
+│       ├── 2.jpg
+│       ├── 3.jpg
+│       ├── 4.jpg
+│       ├── 5.jpg
+│       ├── 6.jpg
+│       ├── 7.jpg
+│       ├── 8.jpg
+│       ├── appstore.png
+│       ├── berlin.jpg
+│       ├── cust-1.jpg
+│       ├── cust-2.jpg
+│       ├── cust-3.jpg
+│       ├── lisbon.jpg
+│       ├── Logo.png
+│       ├── london.jpg
+│       ├── Phone.png
+│       ├── playstore.png
+│       └── san-francisco.jpg
 ├── vendors/
-│   ├── css/
-│   │   ├── grid.css
-│   │   └── normalize.css
-│   ├── fonts/
-│   └── js/
+│   └── css/
+│       ├── grid.css
+│       └── normalize.css
 └── index.html
