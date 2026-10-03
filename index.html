@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="vendors/css/normalize.css">
         <link rel="stylesheet" href="vendors/css/grid.css">
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -68,7 +69,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-meals">
+        <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
             <ul class="meals-showcase clearfix">
                 <li>
                     <figure class="meal-photo">
@@ -114,13 +115,13 @@
                 </li>
             </ul>
         </section>
-        <section class="section-steps" id="hiw">
+        <section class="section-steps" id="hiw" data-aos="fade-in" data-aos-duration="2000">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1,2,3</h2>
             </div>
             <div class="row">
                 <div class="col span_1_of_2 steps-box">
-                    <img src="resources/img/Phone.png" alt="phone-img" class="app-screen">
+                    <img data-aos="slide-left" data-aos-duration="1000" src="resources/img/Phone.png" alt="phone-img" class="app-screen">
                 </div>
                 <div class="col span_1_of_2 steps-box">
                     <div class="works-step">
@@ -140,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-cities" id="city">
+        <section class="section-cities" id="city" data-aos="fade-in" data-aos-duration="2000">
             <div class="row">
                 <h2>We're currently in these cities</h2>
             </div>
@@ -211,7 +212,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-testimonials">
+        <section class="section-testimonials" data-aos="fade-in" data-aos-duration="2000">
             <div class="row">
                 <h2>Our customers can't live without us</h2>
             </div>
@@ -236,13 +237,13 @@
                 </div>
             </div>
         </section>
-        <section class="section-plans" id="plans">
+        <section class="section-plans" id="plans" data-aos="fade-in" data-aos-duration="2000">
             <div class="row">
                 <h2>Start eating healthy today</h2>
             </div>
             <div class="row">
                 <div class="col span_1_of_3">
-                    <div class="plan-box">
+                    <div data-aos="zoom-in" data-aos-duration="2000" class="plan-box">
                         <div>
                             <h3>Premium</h3>
                             <p class="plan-price">$399 <span>/ month</span></p>
@@ -303,7 +304,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-form" id="signup">
+        <section class="section-form" id="signup" data-aos="fade-in" data-aos-duration="2000">
             <div class="row">
                 <h2>We're happy to hear from you</h2>
             </div>
@@ -392,6 +393,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script>
             $(document).ready(function(){
             // Add smooth scrolling to all links
